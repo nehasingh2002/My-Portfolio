@@ -12,7 +12,7 @@ function Home() {
           My name is Neha singh.<br/> 
           I have a passion for web development and enjoy creating dynamic and responsive web applications.
         </p>
-        <button className='btn-down'><a href='https://mega.nz/file/NsUF0SCa#2xHVLCmbrff-dT7yXCWYlFK-Iy2cM2mLLMZCBCcSslQ'>Download Resume</a></button>
+        <button className='btn-down'><a href='https://drive.google.com/file/d/1fi9RpxXASzPYTgmngKvMVpgtZLw8YXW6/view?usp=sharing'>Download Resume</a></button>
         </div>
       </div>
     </section>
