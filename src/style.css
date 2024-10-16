@@ -1,0 +1,468 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; /* Sleek modern font */
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Gradient background */
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Fancy Navbar Styling */
+/* Fancy Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px 30px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Adjust the brand name's font size */
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-right: auto;
+}
+
+/* Navigation Links */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-right: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  font-size: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media query for screens 600px or smaller */
+@media (max-width: 600px) {
+  .navbar-nav {
+    display: none; /* Hide the navbar links */
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; /* Reduce the brand name size */
+  }
+}
+
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fancy Section Headings */
+h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+/*Home Section Style */
+#home {
+  margin-top: 60px;
+  align-items: center;
+}
+
+.home-content-1 {
+  padding-top: 80px;
+  padding-bottom: 80px ;
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Centers image and text vertically */
+  justify-content: space-evenly /* Adds space between image and text */
+}
+
+.home-image {
+  width: 300px; /* Image width */
+  height: 300px; /* Image height */
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 50px; /* Space between image and text */
+  margin-left: 50px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+.home-content-2 {
+  display: grid; /* Flexbox for alignment */
+  grid-row: inherit;
+  align-items: center; /* Centers image and text vertically */
+  justify-content: space-evenly /* Adds space between image and text */
+}
+.home-content-2 h1 {
+  color: #333; /* Set the color of the h2 tag to #333 */
+  margin-top: 20px ;
+  font-size: 2rem; /* Adjust the font size if needed */
+}
+.home-content-2 p {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 600px; /* Limiting the width of the paragraph */
+  margin: auto;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.btn-down{
+  width: 200px;
+  height: 50px;
+  border: none;
+  font-weight: bold;
+  border-radius: 25px;
+  background-color: white;
+  padding: 10px 10px;
+  margin-top: 20px;
+  align-items: center;
+}
+.btn-down a{
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: rgb(82, 79, 79);
+}
+.btn-down:hover{
+  background-color: rgb(57, 190, 170);
+}
+
+@media (max-width: 600px){
+  .home-content-1{
+    padding: 50px;
+    display: grid;
+    grid-column: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .home-image{
+    width: 200px;
+    height: 200px;
+  }
+  .home-content-2 h1,p{
+    text-align: center;
+  }
+  .btn-down{
+    margin: auto;
+  }
+}
+
+/* About Section Styles */
+#about {
+  padding: 100px 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling the h2 tag specifically */
+#about h2 {
+  color: #333;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Skills block styling */
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.skills-content h1 {
+  font-size: 2rem;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust number of columns as needed */
+  gap: 15px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#about p {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.5;
+  max-width: 600px;
+  margin-left: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Responsive styles for screens with max-width 600px */
+@media (max-width: 600px) {
+  .about-content {
+    grid-template-columns: 1fr; /* Stack the paragraph and skills content */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust the columns for small screens */
+    justify-content: space-between; /* Justify space between images */
+    align-items: center;
+    width: 100%;
+  }
+
+  #about p {
+    font-size: 1.3rem;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-right: 30px;
+  }
+}
+
+
+
+/* Fancy Project Cards */
+/* Projects Section Styles */
+#projects {
+  padding: 60px 20px;
+}
+
+/* Project grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create responsive columns */
+  gap: 20px; /* Space between project cards */
+  padding: 20px;
+}
+
+/* Project card styles */
+.project-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%; /* Ensures the card doesn’t overflow */
+  height: 330px; /* Fixed height for a compact look */
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Adds a hover effect to the project card */
+}
+
+.project-image {
+  width: 100px; /* Smaller image size */
+  height: 100px;
+  border-radius: 10px;
+  object-fit: cover; /* Ensures the image maintains aspect ratio */
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Contact Form Styling */
+#contact {
+  padding: 80px 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-control {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #fda085;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #333;
+  box-shadow: 0 0 10px rgba(253, 160, 133, 0.5);
+}
+
+.btn-submit {
+  background-color: #fda085;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #fff;
+  color: #333;
+  border: 2px solid #333;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 30px;
+  /* display: flex;
+  justify-content: space-between; Align content to left and right */
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create responsive columns */
+  gap: 20px;
+}
+
+.footer-left{
+  display: flex;
+  align-items:center;
+}
+.footer-left p {
+  margin: 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Aligns contact details to the right */
+  padding-right: 50px;
+}
+
+.footer-right p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-right a:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.social-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 15px; /* Space between social media links */
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem; /* Size of the icons */
+  margin-left: 15px; /* Space between icons */
+  transition: color 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  color: #007bff; /* Hover color */
+}
+
+@media (max-width: 600px){
+  .footer-right{
+    align-items: flex-start;
+  }
+}
+
+
+
